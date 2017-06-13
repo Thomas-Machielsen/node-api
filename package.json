@@ -1,0 +1,30 @@
+{
+  "name": "fed-app",
+  "version": "0.0.1",
+  "description": "fed-app",
+  "main": "app.js",
+  "author": "",
+  "scripts": {
+    "lint": "eslint *//*.js || exit 0",
+    "build": "node --harmony app.js",
+    "env": "env",
+    "prebuild": "npm run lint",
+    "watch:js": "onchange '**/**/*.js' -i -- npm run build",
+    "watch": "npm run watch:js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "babel-eslint": "^7.2.3",
+    "body-parser": "^1.10.1",
+    "express": "^4.10.7",
+    "express-myconnection": "^1.0.4",
+    "express-session": "^1.10.1",
+    "nunjucks": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "onchange": "^3.2.1"
+  }
+}
