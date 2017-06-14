@@ -1,6 +1,14 @@
-<h1>
-    Hello
-</h1>
-<p>
-    {{ data }}
-</p>
+{% extends './layout/default.njk' %}
+
+
+{% block body %}
+
+    <h1>
+        Hello
+    </h1>
+    {% include "components/nav.njk" %}
+
+    <p>
+        {{ data }}
+    </p>
+{% endblock %}

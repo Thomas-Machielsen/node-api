@@ -10,8 +10,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Nunjucks setup
 nunjucks.configure('views', {
-  autoescape: true,
-  express: app
+  express: app,
+  watch: true
 });
 
 app.set('view engine', 'njk');
